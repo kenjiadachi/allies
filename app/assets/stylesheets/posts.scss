@@ -1,0 +1,35 @@
+//共通
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+//ここからheader
+header{
+  width: 100%;
+  height: 30px;
+  background: skyblue;
+}
+
+.header-logo {
+  float: left;
+}
+
+.header-menus {
+  overflow: hidden;
+  float: right;
+}
+
+.header-menus li {
+  float: left;
+  margin-right: 10px;
+}
+
