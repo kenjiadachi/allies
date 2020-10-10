@@ -1,4 +1,7 @@
-<%= link_to("新規投稿", "/posts/new") %>
+<div class="contents-menus">
+  <%= link_to("新規投稿", "/posts/new") %>
+  <%= link_to("ユーザー一覧から探す", "/users/index") %>
+</div>
 
 <div class="posts-contents">
   <% @posts.each do |post| %>
