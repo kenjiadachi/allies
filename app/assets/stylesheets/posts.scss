@@ -13,10 +13,10 @@ li {
 }
 
 //ここからheader
-header{
+header {
   width: 100%;
-  height: 30px;
-  background: skyblue;
+  height: 26px;
+  background: #CCCCCC;
 }
 
 .header-logo {
@@ -31,5 +31,11 @@ header{
 .header-menus li {
   float: left;
   margin-right: 10px;
+}
+
+//ここからトップページコンテンツ
+
+.post-contents {
+  flex-flow: column;
 }
 
