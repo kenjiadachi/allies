@@ -1,5 +1,9 @@
-<% @posts.each do |post| %>
-  <div class="post-contents">
-    <%= post.content %>
-  </div>
-<% end %>
+<%= link_to("新規投稿", "/posts/new") %>
+
+<div class="posts-contents">
+  <% @posts.each do |post| %>
+    <div class="posts-contents-item">
+      <%=link_to(post.content, "/posts/#{post.id}") %>
+    </div>
+  <% end %>
+</div>
