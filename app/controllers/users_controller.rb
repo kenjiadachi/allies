@@ -25,7 +25,8 @@ class UsersController < ApplicationController
       image: "default_icon.jpg"
     )
     if @user.save
-      redirect_to("/users/#{@user.id}")
+      session[:user_id] = @user.id
+      redirect_to("/")
     else
       render("users/new")
     end
@@ -39,8 +40,12 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @user.name = params[:name]
     @user.email = params[:email]
+    @user.password = params[:password]
     @user.sexual = params[:sexual]
+    @user.sexual_details = params[:sexual_details]
     @user.love = params[:love]
+    @user.love_details = params[:love_details]
+    @user.introduction = params[:introduction]
     if params[:image]
       @user.image = "#{@user.id}.jpg"
       image = params[:image]

@@ -6,8 +6,14 @@
   <%= @user.email %>
   <p>▶︎セクシュアリティ</p>
   <%= @user.sexual %>
+  <p>▶︎詳細なセクシュアリティ</p>
+  <%= @user.sexual_details %>
   <p>▶︎恋愛対象</p>
   <%= @user.love %>
+  <p>▶︎詳細な恋愛対象</p>
+  <%= @user.love_details %>
+  <p>▶︎自己紹介</p>
+  <%= @user.introduction %>
 
   <div class="#">
     <% if @user.id == @current_user.id %>

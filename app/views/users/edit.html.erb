@@ -6,6 +6,8 @@
     <input name="image" type="file">
     <p>メールアドレス</p>
     <input name="email" value="<%= @user.email %>">
+    <p>パスワード</p>
+    <input name="password" type="password" value="<%= @user.password %>">
     <p>セクシュアリティ</p>
     <select name="sexual">
       <option value="女">女</option>
@@ -18,6 +20,8 @@
       <option value="DSD">DSD</option>
       <option value="その他">その他</option>
     </select>
+    <p>詳細なセクシュアリティ</p>
+    <input name="sexual_details" value="<%= @user.sexual_details %>">
     <p>恋愛対象</p>
     <select name="love">
       <option value="女">女</option>
@@ -27,6 +31,10 @@
       <option value="アセクシュアル">アセクシュアル </option>
       <option value="その他">その他</option>
     </select>
+    <p>詳細な恋愛対象</p>
+    <input name="love_details" value="<%= @user.love_details %>">
+    <p>自己紹介</p>
+    <textarea name="introduction"><%= @user.introduction %></textarea>
     <input type="submit" value="保存">
   <% end %>
 </div>
