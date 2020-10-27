@@ -2,8 +2,6 @@
   <img src="<%= "/images/#{@user.image}" %>" width="100" height="100">
   <p>▶︎ユーザー名</p>
   <%= @user.name %>
-  <p>▶︎メールアドレス</p>
-  <%= @user.email %>
   <p>▶︎セクシュアリティ</p>
   <%= @user.sexual %>
   <p>▶︎詳細なセクシュアリティ</p>
@@ -23,7 +21,7 @@
 </div>
 
 <div class="#">
-  <p>これまでの投稿</p>
+  <p>○これまでの投稿</p>
   <% @user.posts.each do |post| %>
     <div class="#">
       <div class="#">

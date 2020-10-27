@@ -10,7 +10,8 @@
       <div class="#">
         ▶<%= link_to(post.user.name, "/users/#{post.user.id}") %>
       </div>
+      <%= post.user.sexual %><br>
+      <%= post.user.love %><br>
       <%=link_to(post.content, "/posts/#{post.id}") %>
-    </div>
   <% end %>
 </div>
