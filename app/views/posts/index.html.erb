@@ -1,17 +1,26 @@
-<div class="contents-menus">
-  <%= link_to("新規投稿", "/posts/new") %>
-  <%= link_to("ユーザー一覧から探す", "/users/index") %>
-</div>
+<div class="contents">
+  <ul class="contents-menus">
+    <li>
+      <%= link_to("新規投稿", "/posts/new") %>
+    </li>
+    <li>
+      <%= link_to("ユーザー一覧から探す", "/users/index") %>
+    </li>
+  </ul>
 
-<div class="index-posts-contents">
-  <% @posts.each do |post| %>
-    <div class="posts-contents-item">
-      <img src="<%= "/images/#{post.user.image}" %>" width="100" height="100">
-      <div class="#">
-        ▶<%= link_to(post.user.name, "/users/#{post.user.id}") %>
+  <div class="contents-list">
+    <% @posts.each do |post| %>
+      <div class="contents-item">
+        <div class="contents-left">
+          <img src="<%= "/images/#{post.user.image}" %>" width="100" height="100">
+        </div>
+        <div class="contents-right">
+          ▶<%= link_to(post.user.name, "/users/#{post.user.id}") %><br>
+          <%= post.user.sexual %><br>
+          <%= post.user.love %><br>
+          <%=link_to(post.content, "/posts/#{post.id}") %>
+        </div>
       </div>
-      <%= post.user.sexual %><br>
-      <%= post.user.love %><br>
-      <%=link_to(post.content, "/posts/#{post.id}") %>
-  <% end %>
+    <% end %>
+  </div>
 </div>
