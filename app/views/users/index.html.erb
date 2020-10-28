@@ -1,9 +1,20 @@
-<p>ユーザー一覧</p>
-<% @users.each do |user| %>
-  <div class="user-item">
-    <img src="<%= "/images/#{user.image}" %>" ><br>
-    ▶︎<%= link_to(user.name, "/users/#{user.id}") %><br>
-    <%= user.sexual %><br>
-    <%= user.love %><br>
+<div class="users">
+  <p>ユーザー一覧</p>
+  <div class="users-list">
+    <% @users.each do |user| %>
+      <div class="users-item">
+        <div class="users-left">
+          <img src="<%= "/images/#{user.image}" %>" >
+        </div>
+        <div class="users-right">
+          <div class="users-name">
+            <%= link_to(user.name, "/users/#{user.id}") %>
+          </div>
+          <div class="users-sex">
+            ⚤ <%= user.sexual %> / ♡ <%= user.love %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
