@@ -4,8 +4,17 @@
   padding: 0px;
 }
 
+html {
+  font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+}
+
+body {
+  background-color: rgb(255, 248, 238);
+}
+
 a {
   text-decoration: none;
+  color: #2d3133;
 }
 
 li {
@@ -14,6 +23,9 @@ li {
 
 img {
   border-radius: 50%;
+  background-color: aqua;
+  width: 100px;
+  height: 100px;
 }
 
 //ここからheader
@@ -22,6 +34,7 @@ header {
   height: 50px;
   margin-bottom: 30px;
   background: #FEA7C0;
+  box-shadow: 0 2px 6px #c1ced7;
 }
 
 header a {
@@ -70,19 +83,52 @@ header a {
   padding: 10px 10px 10px 10px;
   border-radius: 16px;
   background-color: #FEA7C0;
+  box-shadow: 0 2px 6px #c1ced7;
 }
 
 .contents-list {
   width: 100%;
   height: auto;
   padding-top: 100px;
+  
 }
 
 .contents-item {
-  flex-flow: column;
-  width: 500px;
-  height: 300px;
-  margin-bottom: 40px;
   float: left;
-
+  flex-flow: column;
+  padding: 5px 5px 5px 5px;
+  width: 500px;
+  height: 100px;
+  border: solid;
+  border: 1px solid;
+  border-radius: 30px;
+  border-color: #FEA7C0;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
 }
+
+.contents-left {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.contents-right {
+  width: 400px;
+  height: 100px;
+  margin-left: 100px;
+}
+
+.contents-name {
+  font-size: 26px;
+  width: 360px;
+  height: 34px;
+  margin-left: 20px;
+  border-bottom: dotted 3px #FEA7C0;
+}
+
+.contents-name span {
+  font-size: 16px;
+}
+

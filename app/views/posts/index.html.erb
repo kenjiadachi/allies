@@ -12,13 +12,18 @@
     <% @posts.each do |post| %>
       <div class="contents-item">
         <div class="contents-left">
-          <img src="<%= "/images/#{post.user.image}" %>" width="100" height="100">
+          <img src="<%= "/images/#{post.user.image}" %>" >
         </div>
         <div class="contents-right">
-          ▶<%= link_to(post.user.name, "/users/#{post.user.id}") %><br>
-          <%= post.user.sexual %><br>
-          <%= post.user.love %><br>
-          <%=link_to(post.content, "/posts/#{post.id}") %>
+          <div class="contents-name">
+            <%= link_to(post.user.name, "/users/#{post.user.id}") %>
+            <span>
+              ⚤ <%= post.user.sexual %> / ♡ <%= post.user.love %>
+            </span>
+          </div>
+          <div class="contents-content">
+            <%=link_to(post.content, "/posts/#{post.id}") %>
+          </div>
         </div>
       </div>
     <% end %>
