@@ -1,35 +1,37 @@
-<p>新規ユーザー登録</p>
-<div class="users-form">
-  <%= form_tag("/users/create") do %>
-    <p>ユーザー名</p>
-    <input name="name">
-    <p>メールアドレス</p>
-    <input name="email">
-    <p>パスワード</p>
-    <input name="password" type="password">
-    <p>セクシュアリティ</p>
-    <select name="sexual" required >
-      <option value="">セクシュアリティを選択</option>
-      <option value="female">female</option>
-      <option value="male">male</option>
-      <option value="FtM">FtM</option>
-      <option value="FtX">FtX</option>
-      <option value="MtF">MtF</option>
-      <option value="MtX">MtX</option>
-      <option value="Queer">Queer</option>
-      <option value="DSD">DSD</option>
-      <option value="その他">その他</option>
-    </select>
-    <p>恋愛対象</p>
-    <select name="love" required >
-      <option value="">恋愛対象を選択</option>
-      <option value="female">female</option>
-      <option value="male">male</option>
-      <option value="バイセクシュアル">バイセクシュアル</option>
-      <option value="パンセクシュアル">パンセクシュアル</option>
-      <option value="アセクシュアル">アセクシュアル </option>
-      <option value="その他">その他</option>
-    </select>
-    <input type="submit" value="新規登録">
-  <% end %>
+<div class="signup">
+  <h1>新規ユーザー登録</h1>
+  <div class="signup-form">
+    <%= form_tag("/users/create") do %>
+      <p>ユーザー名</p>
+      <input name="name">
+      <p>メールアドレス</p>
+      <input name="email">
+      <p>パスワード</p>
+      <input name="password" type="password">
+      <p>セクシュアリティ</p>
+      <select name="sexual" required >
+        <option value="">セクシュアリティを選択</option>
+        <option value="female">female</option>
+        <option value="male">male</option>
+        <option value="FtM">FtM</option>
+        <option value="FtX">FtX</option>
+        <option value="MtF">MtF</option>
+        <option value="MtX">MtX</option>
+        <option value="Queer">Queer</option>
+        <option value="DSD">DSD</option>
+        <option value="その他">その他</option>
+      </select>
+      <p>恋愛対象</p>
+      <select name="love" required >
+        <option value="">恋愛対象を選択</option>
+        <option value="female">female</option>
+        <option value="male">male</option>
+        <option value="バイセクシュアル">バイセクシュアル</option>
+        <option value="パンセクシュアル">パンセクシュアル</option>
+        <option value="アセクシュアル">アセクシュアル </option>
+        <option value="その他">その他</option>
+      </select>
+      <input type="submit" value="新規登録">
+    <% end %>
+  </div>
 </div>

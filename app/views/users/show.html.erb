@@ -1,33 +1,46 @@
-<div class="user-details">
-  <img src="<%= "/images/#{@user.image}" %>" >
-  <p>▶︎ユーザー名</p>
-  <%= @user.name %>
-  <p>▶︎セクシュアリティ</p>
-  <%= @user.sexual %>
-  <p>▶︎詳細なセクシュアリティ</p>
-  <%= @user.sexual_details %>
-  <p>▶︎恋愛対象</p>
-  <%= @user.love %>
-  <p>▶︎詳細な恋愛対象</p>
-  <%= @user.love_details %>
-  <p>▶︎自己紹介</p>
-  <%= @user.introduction %>
+<div class="user">
+  <h1>ユーザーの詳細</h1>
+  <div class="user-details">
+    <img src="<%= "/images/#{@user.image}" %>" >
+    <p>ユーザー名</p>
+    <%= @user.name %>
+    <p>セクシュアリティ</p>
+    <%= @user.sexual %>
+    <p>詳細なセクシュアリティ</p>
+    <%= @user.sexual_details %>
+    <p>恋愛対象</p>
+    <%= @user.love %>
+    <p>詳細な恋愛対象</p>
+    <%= @user.love_details %>
+    <p>自己紹介</p>
+    <%= @user.introduction %>
 
-  <div class="#">
-    <% if @user.id == @current_user.id %>
-      <%= link_to("編集", "/users/#{@user.id}/edit") %>
-    <% end %>
-  </div>
-</div>
-
-<div class="#">
-  <p>○これまでの投稿</p>
-  <% @user.posts.each do |post| %>
     <div class="#">
-      <div class="#">
-        <%= link_to(post.user.name, "/users/#{post.user.id}") %>
-      </div>
-      <%= link_to(post.content, "/posts/#{post.id}") %>
+      <% if @user.id == @current_user.id %>
+        <%= link_to("編集", "/users/#{@user.id}/edit") %>
+      <% end %>
     </div>
-  <% end %>
+  </div>
+
+    <div class="post-list">
+      <h1>これまでの投稿</h1>
+      <div class="post-item">
+        <% @user.posts.each do |post| %>
+          <div class="user-post">
+            <div class="post-left">
+              <img src="<%= "/images/#{@user.image}" %>" >
+            </div>
+            <div class="post-right">
+              <div class="user-name">
+                <%= link_to(post.user.name, "/users/#{post.user.id}") %><br>
+              </div>
+              <div class="user-content">
+                <%= link_to(post.content, "/posts/#{post.id}") %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

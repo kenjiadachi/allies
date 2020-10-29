@@ -112,3 +112,141 @@
   border-radius: 16px;
   margin: 26px 0px 0px 400px;
 }
+
+//ここから新規登録ページ
+.signup {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  margin-left: 360px;
+}
+
+.signup h1 {
+  width: 210px;
+  height: 36px;
+  background-color: #FEA7C0;
+  color: white;
+  font-size: 26px;
+  padding: 10px 10px 10px 10px;
+  margin-left: 40px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.signup-form {
+  margin-top: 20px;
+  width: 610px;
+  height: 450px;
+  border: solid;
+  border: 1px solid;
+  border-radius: 30px;
+  border-color: #FEA7C0;
+  background-color: white;
+  padding: 40px 0px 40px 90px;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.signup-form p {
+  margin-top: 20px;
+}
+
+.signup-form input[name="name"], input[name="email"], input[name="password"]  {
+  width: 500px;
+  height: 26px;
+  font-size: 16px;
+}
+
+.signup-form select {
+  width: 505px;
+  height: 32px;
+  font-size: 16px;
+}
+
+.signup-form input[type="submit"] {
+  width: 100px;
+  height: 50px;
+  background-color: #FEA7C0;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 16px;
+  margin: 26px 0px 0px 400px;
+}
+
+//ここからユーザー詳細ページ
+.user {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  margin-left: 360px;
+  margin-bottom: 360px;
+}
+
+.user h1 {
+  width: 184px;
+  height: 36px;
+  background-color: #FEA7C0;
+  color: white;
+  font-size: 26px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.user-details {
+  margin-top: 20px;
+  width: 610px;
+  height: 450px;
+  border: solid;
+  border: 1px solid;
+  border-radius: 30px;
+  border-color: #FEA7C0;
+  background-color: white;
+  padding: 40px 0px 40px 90px;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+
+.post-list {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+
+.post-item {
+  margin-top: 20px;
+}
+
+.user-post {
+  width: 690px;
+  height: 100px;
+  padding: 5px 5px 5px 5px;
+  border: solid;
+  border: 1px solid;
+  border-radius: 30px;
+  border-color: #FEA7C0;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.post-left {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.post-right {
+  width: 400px;
+  height: 100px;
+  margin-left: 100px;
+}
+
+.user-name {
+  font-size: 26px;
+  width: 520px;
+  height: 34px;
+  margin-left: 20px;
+  margin-bottom: 6px;
+  border-bottom: dotted 3px #FEA7C0;
+}
