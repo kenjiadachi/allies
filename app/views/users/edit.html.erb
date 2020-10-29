@@ -1,40 +1,43 @@
-<div class="users-form">
-  <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
-    <p>ユーザー名</p>
-    <input name="name" value="<%= @user.name %>">
-    <p>画像</p>
-    <input name="image" type="file">
-    <p>メールアドレス</p>
-    <input name="email" value="<%= @user.email %>">
-    <p>パスワード</p>
-    <input name="password" type="password" value="<%= @user.password %>">
-    <p>セクシュアリティ</p>
-    <select name="sexual">
-      <option value="female">female</option>
-      <option value="male">male</option>
-      <option value="FtM">FtM</option>
-      <option value="FtX">FtX</option>
-      <option value="MtF">MtF</option>
-      <option value="MtX">MtX</option>
-      <option value="Queer">Queer</option>
-      <option value="DSD">DSD</option>
-      <option value="その他">その他</option>
-    </select>
-    <p>詳細なセクシュアリティ</p>
-    <input name="sexual_details" value="<%= @user.sexual_details %>">
-    <p>恋愛対象</p>
-    <select name="love">
-      <option value="female">female</option>
-      <option value="male">male</option>
-      <option value="バイセクシュアル">バイセクシュアル</option>
-      <option value="パンセクシュアル">パンセクシュアル</option>
-      <option value="アセクシュアル">アセクシュアル </option>
-      <option value="その他">その他</option>
-    </select>
-    <p>詳細な恋愛対象</p>
-    <input name="love_details" value="<%= @user.love_details %>">
-    <p>自己紹介</p>
-    <textarea name="introduction"><%= @user.introduction %></textarea>
-    <input type="submit" value="保存">
-  <% end %>
+<div class="user-edit">
+  <h1>ユーザー情報の編集</h1>
+  <div class="user-edit-form">
+    <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
+      <p>ユーザー名</p>
+      <input name="name" value="<%= @user.name %>">
+      <p>画像</p>
+      <input name="image" type="file">
+      <p>メールアドレス</p>
+      <input name="email" value="<%= @user.email %>">
+      <p>パスワード</p>
+      <input name="password" type="password" value="<%= @user.password %>">
+      <p>セクシュアリティ</p>
+      <select name="sexual">
+        <option value="female">female</option>
+        <option value="male">male</option>
+        <option value="FtM">FtM</option>
+        <option value="FtX">FtX</option>
+        <option value="MtF">MtF</option>
+        <option value="MtX">MtX</option>
+        <option value="Queer">Queer</option>
+        <option value="DSD">DSD</option>
+        <option value="その他">その他</option>
+      </select>
+      <p>詳細なセクシュアリティ</p>
+      <input name="sexual_details" value="<%= @user.sexual_details %>">
+      <p>恋愛対象</p>
+      <select name="love">
+        <option value="female">female</option>
+        <option value="male">male</option>
+        <option value="バイセクシュアル">バイセクシュアル</option>
+        <option value="パンセクシュアル">パンセクシュアル</option>
+        <option value="アセクシュアル">アセクシュアル </option>
+        <option value="その他">その他</option>
+      </select>
+      <p>詳細な恋愛対象</p>
+      <input name="love_details" value="<%= @user.love_details %>">
+      <p>自己紹介</p>
+      <textarea name="introduction"><%= @user.introduction %></textarea>
+      <input type="submit" value="保存">
+    <% end %>
+  </div>
 </div>
