@@ -14,10 +14,9 @@
     <%= @user.love_details %>
     <p>自己紹介</p>
     <%= @user.introduction %>
-
-    <div class="#">
+    <div class="user-details-menu">
       <% if @user.id == @current_user.id %>
-        <%= link_to("編集", "/users/#{@user.id}/edit") %>
+        <%= link_to("編集", "/users/#{@user.id}/edit", class: "user-details-edit") %>
       <% end %>
     </div>
   </div>

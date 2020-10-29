@@ -196,7 +196,7 @@
 .user-details {
   margin-top: 20px;
   width: 610px;
-  height: 450px;
+  height: auto;
   border: solid;
   border: 1px solid;
   border-radius: 30px;
@@ -206,6 +206,28 @@
   box-shadow: 0 2px 6px #c1ced7;
 }
 
+.user-details p {
+  width: 300px;
+  font-size: 18px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border-bottom: dotted 3px #FEA7C0;
+}
+
+.user-details-menu {
+  width: 60px;
+  height: 40px;
+  margin-top: 30px;
+  padding: 10px 10px 0px 30px;
+  background-color: #FEA7C0;
+  border: none;
+  border-radius: 16px;
+}
+
+.user-details-edit {
+  color: white;
+  font-size: 20px;
+}
 
 .post-list {
   width: 100%;
