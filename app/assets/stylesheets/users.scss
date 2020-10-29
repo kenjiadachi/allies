@@ -6,7 +6,7 @@
 .users h1 {
   width: 160px;
   height: 30px;
-  margin-right: 16px;
+  margin-left: 40px;
   padding: 10px 10px 10px 10px;
   border-radius: 16px;
   background-color: #FEA7C0;
@@ -22,6 +22,9 @@
 .users-item {
   float: left;
   flex-flow: column;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  margin-left: 40px;
   padding: 5px 5px 5px 5px;
   width: 500px;
   height: 100px;
@@ -74,7 +77,6 @@
   color: white;
   font-size: 26px;
   padding: 10px 10px 10px 10px;
-  margin-left: 40px;
   border-radius: 16px;
   box-shadow: 0 2px 6px #c1ced7;
 }
@@ -128,7 +130,6 @@
   color: white;
   font-size: 26px;
   padding: 10px 10px 10px 10px;
-  margin-left: 40px;
   border-radius: 16px;
   box-shadow: 0 2px 6px #c1ced7;
 }
@@ -242,6 +243,7 @@
 .user-post {
   width: 690px;
   height: 100px;
+  margin-bottom: 20px;
   padding: 5px 5px 5px 5px;
   border: solid;
   border: 1px solid;
@@ -288,7 +290,6 @@
   background-color: #FEA7C0;
   color: white;
   font-size: 26px;
-  margin-left: 40px;
   padding: 10px 10px 10px 10px;
   border-radius: 16px;
   box-shadow: 0 2px 6px #c1ced7;
@@ -311,7 +312,7 @@
   margin-top: 20px;
 }
 
-.user-edit-form input[name="name"], input[name="email"], input[name="password"], input[name="sexual_details"], input[name="love_details"], {
+.user-edit-form input[name="name"], input[name="email"], input[name="password"], input[name="sexual_details"], input[name="love_details"] {
   width: 500px;
   height: 26px;
   font-size: 16px;
