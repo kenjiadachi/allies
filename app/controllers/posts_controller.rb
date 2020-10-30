@@ -20,8 +20,12 @@ class PostsController < ApplicationController
       content: params[:content],
       user_id: @current_user.id
     )
-    @post.save
-    redirect_to("/")
+    if @post.save
+      flash[:notice] = "投稿を作成しました"
+      redirect_to("/")
+    else
+      render("posts/new")
+    end
   end
 
   def edit
