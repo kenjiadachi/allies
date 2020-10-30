@@ -26,6 +26,7 @@ class UsersController < ApplicationController
     )
     if @user.save
       session[:user_id] = @user.id
+      flash[:notice] = "ユーザー登録が完了しました"
       redirect_to("/")
     else
       render("users/new")
@@ -53,6 +54,7 @@ class UsersController < ApplicationController
     end
 
     if @user.save
+      flash[:notice] = "ユーザー情報を編集しました"
       redirect_to("/users/#{@user.id}")
     else
       render("users/edit")
@@ -66,6 +68,7 @@ class UsersController < ApplicationController
     @user = User.find_by(email: params[:email], password: params[:password])
     if @user
       session[:user_id] = @user.id
+      flash[:notice] = "ログインしました"
       redirect_to("/")
     else
       @error_message = "メールアドレスまたはパスワードが間違っています"
@@ -77,6 +80,7 @@ class UsersController < ApplicationController
 
   def logout
     session[:user_id] = nil
+    flash[:notice] = "ログアウトしました"
     redirect_to("/login")
   end
 
