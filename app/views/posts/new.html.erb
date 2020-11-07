@@ -1,3 +1,4 @@
+<!--
 <div class="post">
   <h1>投稿する</h1>
   <div class="post-form">
@@ -9,6 +10,23 @@
       <% end %>
       <textarea name="content"><%= @post.content %></textarea>
       <input type="submit" value="投稿">
+    <% end %>
+  </div>
+</div>
+-->
+
+
+<div class="post">
+  <h1>投稿する</h1>
+  <div class="post-form">
+    <%= form_with model: @posts do |form| %>
+      <% @post.errors.full_messages.each do |message| %>
+        <div class="form-error">
+          <%= message %>
+        </div>
+      <% end %>
+      <%= form.text_area :content %>
+      <%= form.submit %>
     <% end %>
   </div>
 </div>
