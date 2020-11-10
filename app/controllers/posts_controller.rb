@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(
-      content: params[:content],
+      content: params[:posts][:content],
       user_id: @current_user.id
     )
     if @post.save

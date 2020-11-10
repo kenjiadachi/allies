@@ -19,14 +19,14 @@
 <div class="post">
   <h1>投稿する</h1>
   <div class="post-form">
-    <%= form_with model: @posts do |form| %>
+    <%= form_with model: @posts do |f| %>
       <% @post.errors.full_messages.each do |message| %>
         <div class="form-error">
           <%= message %>
         </div>
       <% end %>
-      <%= form.text_area :content %>
-      <%= form.submit %>
+      <%= f.text_area :content %>
+      <%= f.submit "投稿" %>
     <% end %>
   </div>
 </div>
