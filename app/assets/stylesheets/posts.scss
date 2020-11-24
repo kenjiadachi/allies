@@ -372,3 +372,26 @@ header a {
   border-radius: 16px;
   margin: 12px 0px 0px 500px;
 }
+
+//ここからページネーション
+
+.pagination {
+  position: fixed;
+  bottom: 0;
+  margin-left: 40px;
+}
+
+.pagination>li>a {
+  border: none;
+  color: #ff85a8 !important;
+}
+
+.pagination>.active>a {
+  background: #FEA7C0 !important;
+  border-color: #FEA7C0 !important;
+  color:white !important;
+}
+
+.pagination>li>a:hover {
+  border-radius: 15px;
+}

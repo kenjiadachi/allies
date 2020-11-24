@@ -1,4 +1,30 @@
 Rails.application.routes.draw do
+
+  #下記はresourcesに書き換えたコード(正常に動作しない)
+
+  # resources :users, :posts
+
+  # resources :login do
+  #   member do
+  #     get 'users#login_form'
+  #     get 'users#login'
+  #   end
+  # end
+
+  # resources :logout do
+  #   member do
+  #     get 'users#logout'
+  #   end
+  # end
+
+  # resources :users/:id/update do
+  #   member do
+  #     get 'users#update'
+  #   end
+  # end
+
+  #下記はresourcesに書き換える前のコード(正常に動作する)
+
   get "login" => "users#login_form"
   post "login" => "users#login"
   get "logout" => "users#logout"
@@ -18,4 +44,5 @@ Rails.application.routes.draw do
   get "posts/:id/edit" => "posts#edit"
   post "posts/:id/update" => "posts#update"
   get "posts/:id/destroy" => "posts#destroy"
+
 end
