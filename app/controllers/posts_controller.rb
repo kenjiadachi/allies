@@ -18,8 +18,9 @@ class PostsController < ApplicationController
   end
 
   def create
+    binding.pry
     @post = Post.new(
-      content: params[:content],
+      content: params[:post][:content],
       user_id: @current_user.id
     )
     if @post.save
